@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ro" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acasă • Rețete Delicioase</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">🍳 Rețete Delicioase</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Acasă</a></li>
+          <li class="nav-item"><a class="nav-link" href="retete.html">Rețete</a></li>
+          <li class="nav-item"><a class="nav-link" href="meniu.html">Meniu</a></li>
+          <li class="nav-item"><a class="nav-link" href="despre.html">Despre</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="ms-lg-3 d-flex gap-2 align-items-center">
+          <button id="themeToggle" class="btn btn-outline-secondary btn-sm" aria-label="Schimbă tema"><i class="bi bi-moon-stars"></i></button>
+          <a class="text-secondary fs-5" href="#" data-bs-toggle="modal" data-bs-target="#helpModal" aria-label="Ajutor"><i class="bi bi-question-circle"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5 pt-5">
+
+    <!-- HERO + CTA -->
+    <section class="text-center mb-4">
+      <h1 class="display-5 fw-bold mb-3">Bun venit la Rețete Delicioase</h1>
+      <p class="lead">Descoperă rețete testate, explicate pas cu pas.</p>
+      <a href="retete.html" class="btn btn-primary btn-lg mt-2">
+        <i class="bi bi-journal-text me-1"></i> Vezi toate rețetele
+      </a>
+    </section>
+
+    <!-- CAROUSEL (3 imagini) -->
+    <header class="mb-5">
+      <div id="heroCarousel" class="carousel slide mt-2"
+           data-bs-ride="carousel" data-bs-interval="3000" data-bs-wrap="true" data-bs-pause="false">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-label="1"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="2"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="3"></button>
+        </div>
+        <div class="carousel-inner rounded-4 shadow-sm overflow-hidden">
+  <div class="carousel-item active">
+    <img src="assets/img/Ciorba_de_pui_a_la_grec.jpg" class="d-block w-100" alt="Ciorbă de pui a la grec">
+    <div class="carousel-caption d-none d-md-block bg-blur rounded-3 p-3">
+      <h5>Ciorbă de pui a la grec</h5>
+      <p>Clasică și aromată.</p>
+    </div>
+  </div>
+  
+  <div class="carousel-item">
+    <img src="assets/img/Frigarui_de_vita.jpg" class="d-block w-100" alt="Paste cu brânză">
+    <div class="carousel-caption d-none d-md-block bg-blur rounded-3 p-3">
+      <h5>Frigărui de vită cu legume</h5>
+      <p>Perfecte pentru grătar.</p>
+    </div>
+  </div>
+  
+  <div class="carousel-item">
+    <img src="assets/img/Papanasi.jpg" class="d-block w-100" alt="Papanași">
+    <div class="carousel-caption d-none d-md-block bg-blur rounded-3 p-3">
+      <h5>Deserturi</h5>
+      <p>Ușor de făcut.</p>
+    </div>
+  </div>
+</div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Înapoi</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Înainte</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- REȚETA SĂPTĂMÂNII (random) -->
+    <section class="my-5" aria-label="Rețeta zilei">
+  <div class="weekly-feature card border-0 shadow-lg overflow-hidden">
+    <div class="row g-0">
+      <!-- IMG + panglică -->
+      <div class="col-md-6 position-relative">
+        <img id="w-img" src="" alt="" class="w-100 h-100 object-fit-cover" loading="lazy">
+        <span class="weekly-ribbon">
+          <i class="bi bi-stars me-1"></i> Rețeta zilei
+        </span>
+      </div>
+
+      <!-- CONȚINUT -->
+      <div class="col-md-6 p-4 p-lg-5 d-flex flex-column justify-content-center">
+        <h2 id="w-title" class="weekly-title mb-2">—</h2>
+        <p id="w-desc" class="weekly-subtle mb-3">—</p>
+
+        <!-- chip-uri opționale; poți completa din JS dacă vrei -->
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <span class="chip"><i class="bi bi-alarm"></i> 35–45 min</span>
+          <span class="chip"><i class="bi bi-people"></i> 4 porții</span>
+          <span class="chip"><i class="bi bi-heart"></i> populară</span>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2 mt-auto">
+          <a id="w-recipe" href="#" class="btn btn-primary btn-lg">
+            <i class="bi bi-book me-1"></i> Vezi rețeta
+          </a>
+          <a id="w-video" href="#" target="_blank" rel="noopener" class="btn btn-outline-danger btn-lg">
+            <i class="bi bi-play-circle me-1"></i> Vezi video
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- EXPLORARE PE CATEGORII -->
+    <section class="my-5" aria-label="Explorează pe categorii">
+      <h2 class="h4 mb-3">Explorează pe categorii</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <a href="retete.html?cat=supe" class="card h-100 text-decoration-none">
+            <img src="assets/img/Supe_ciorbe.jpg" class="card-img-top" alt="Supe și ciorbe" loading="lazy">
+            <div class="card-body">
+              <h3 class="h5 mb-1 text-body">Supe & Ciorbe</h3>
+              <p class="small text-muted mb-0">Ușoare, hrănitoare, pentru orice sezon.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-12 col-md-4">
+          <a href="retete.html?cat=mancaruri" class="card h-100 text-decoration-none">
+            <img src="assets/img/mancaruri.jpg" class="card-img-top" alt="Fripturi și garnituri" loading="lazy">
+            <div class="card-body">
+              <h3 class="h5 mb-1 text-body">Mancaruri</h3>
+              <p class="small text-muted mb-0">Pui, porc, vită, plus piure, orez, legume.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-12 col-md-4">
+          <a href="retete.html?cat=deserturi" class="card h-100 text-decoration-none">
+            <img src="https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=1200" class="card-img-top" alt="Deserturi" loading="lazy">
+            <div class="card-body">
+              <h3 class="h5 mb-1 text-body">Deserturi</h3>
+              <p class="small text-muted mb-0">De la brownies la cheesecake fără coacere.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- HELP MODAL -->
+  <div class="modal fade" id="helpModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Ajutor rapid</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Închide"></button>
+        </div>
+        <div class="modal-body small">
+          • „Vezi toate rețetele” te duce la lista completă.<br>
+          • „Rețeta săptămânii” se schimbă la fiecare accesare.<br>
+          • Butonul cu luna schimbă tema Light/Dark.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BUTOANE UP/DOWN -->
+  <div class="scroll-buttons d-flex flex-column gap-2">
+    <button id="btnUp" class="btn btn-primary shadow"><i class="bi bi-arrow-up"></i></button>
+    <button id="btnDown" class="btn btn-outline-primary shadow"><i class="bi bi-arrow-down"></i></button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="border-top py-4 mt-auto">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <p class="mb-0 small">© <span id="year"></span> Rețete Delicioase</p>
+      <div class="d-flex gap-3 fs-5">
+        <a href="#" aria-label="Facebook" class="text-muted"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Instagram" class="text-muted"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="YouTube" class="text-muted"><i class="bi bi-youtube"></i></a>
+        <a href="#" aria-label="TikTok" class="text-muted"><i class="bi bi-tiktok"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Random „Rețeta săptămânii” -->
+<script>
+  const weeklyPool = [
+    {
+      id: 'supa-gnocchi-pui',
+      title: 'Supă de pui cu gnocchi',
+      desc: 'Cremă ușoară, cu pui, gnocchi și spanac — varianta „Olive Garden”.',
+      img: 'assets/img/supa_pui.webp',
+      recipeLink: 'retete.html#supa-gnocchi-pui',
+      videoLink: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    },
+    {
+      id: 'ciorba-perisoare',
+      title: 'Ciorbă de perișoare',
+      desc: 'Simplă, gustoasă, perfectă pentru familie.',
+      img: 'assets/img/ciorba_perisoare.webp',
+      recipeLink: 'retete.html#ciorba-perisoare',
+      videoLink: 'https://www.youtube.com/watch?v=SEVbryAQlm8&t=3s'
+    },
+    {
+      id: 'shaorma-arabeasca',
+      title: 'Shaorma arăbească de pui',
+      desc: 'Aromată, suculentă, exact ca la shaormerie — dar făcută acasă.',
+      img: 'assets/img/Shaorma-arabeasca.jpg',
+      recipeLink: 'retete.html#shaorma-arabeasca',
+      videoLink: 'https://www.youtube.com/watch?v=JAHHxQSvVVk'
+    },
+    {
+      id: 'frigarui-vita-legume',
+      title: 'Frigărui de vită cu legume asortate',
+      desc: 'Fragede, suculente și aromate — perfecte pentru grătar sau tigaie.',
+      img: 'assets/img/Frigarui_de_vita.jpg',
+      recipeLink: 'retete.html#frigarui-vita-legume',
+      videoLink: 'https://youtu.be/WE67TVV_SL4'
+    },
+    {
+      id: 'paste-feta-rosii',
+      title: 'Paste cu brânză feta și roșii cherry',
+      desc: 'O rețetă simplă, cu un sos cremos și aromat.',
+      img: 'assets/img/Paste_cu_branza.jpg',
+      recipeLink: 'retete.html#paste-feta-rosii',
+      videoLink: 'https://youtu.be/wHl84cXp2R4'
+    },
+    {
+      id: 'papanasi-pufosi',
+      title: 'Papanași pufoși cu brânză de vacă',
+      desc: 'Pufosi, aurii, serviți cu smântână și dulceață de vișine.',
+      img: 'assets/img/Papanasi.jpg',
+      recipeLink: 'retete.html#papanasi-pufosi',
+      videoLink: 'https://youtu.be/AnB18Ag_33A'
+    },
+    {
+      id: 'cheesecake',
+      title: 'Cheesecake San Sebastian',
+      desc: 'Cremos, fin și ușor caramelizat — desert spaniol de vis.',
+      img: 'assets/img/Cheesecake.jpg',
+      recipeLink: 'retete.html#cheesecake',
+      videoLink: 'https://youtu.be/085HewMazqo'
+    },
+    {
+      id: 'ciorba-pui-grec',
+      title: 'Ciorbă de pui a la grec',
+      desc: 'Fina, aromată, cu smântână, orez și zeamă de lămâie.',
+      img: 'assets/img/Ciorba_de_pui_a_la_grec.jpg',
+      recipeLink: 'retete.html#ciorba-pui-grec',
+      videoLink: 'https://youtu.be/FpeDiID8Nug'
+    },
+    {
+      id: 'pancakes',
+      title: 'Pancakes pufoase de post',
+      desc: 'Clătite americane ușoare, pufoase și delicioase, fără lapte sau ouă.',
+      img: 'assets/img/Pancakes.jpg',
+      recipeLink: 'retete.html#pancakes',
+      videoLink: 'https://youtu.be/BCedOLUVw8M'
+    }
+  ];
+
+  (function pickWeekly() {
+    const r = weeklyPool[Math.floor(Math.random() * weeklyPool.length)];
+    document.getElementById('w-img').src = r.img;
+    document.getElementById('w-img').alt = r.title;
+    document.getElementById('w-title').textContent = r.title;
+    document.getElementById('w-desc').textContent = r.desc;
+    document.getElementById('w-recipe').href = r.recipeLink;
+    document.getElementById('w-video').href = r.videoLink;
+  })();
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

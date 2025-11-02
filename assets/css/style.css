@@ -1,0 +1,239 @@
+:root { --bg: #ffffff; --fg: #121212; --card: #f8f9fa; }
+/* ========== DARK / DIM THEME (mai soft) ========== */
+[data-theme="dark"] {
+  /* Paletă mai „caldă” */
+  --bg:            #171a1f;   /* fundal pagină (gri-albăstrui închis) */
+  --surface:       #20242b;   /* suprafețe: carduri, modale */
+  --surface-2:     #1c2026;   /* navbar, footer */
+  --border:        #2d333b;   /* contururi discrete */
+  --text:          #e8ebf1;   /* text principal */
+  --muted:         #b7beca;   /* text secundar */
+  --link:          #89b4ff;   /* link-uri */
+  --primary:       #3d82f6;   /* butoane / accent */
+  --primary-contrast: #ffffff;
+
+  --overlay-strong: rgba(20, 22, 26, .48);
+  --overlay-soft:   rgba(20, 22, 26, .30);
+}
+
+/* Aplicare variabile pe elemente globale */
+[data-theme="dark"] body,
+[data-theme="dark"] .bg-body,
+[data-theme="dark"] .bg-body-tertiary {
+  background-color: var(--bg) !important;
+  color: var(--text);
+}
+
+[data-theme="dark"] .navbar,
+[data-theme="dark"] footer {
+  background-color: var(--surface-2) !important;
+  border-color: var(--border) !important;
+}
+
+[data-theme="dark"] .card,
+[data-theme="dark"] .modal-content,
+[data-theme="dark"] .dropdown-menu,
+[data-theme="dark"] .offcanvas,
+[data-theme="dark"] .list-group-item,
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select,
+[data-theme="dark"] .input-group-text {
+  background-color: var(--surface) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+[data-theme="dark"] .form-control::placeholder,
+[data-theme="dark"] .form-select,
+[data-theme="dark"] .text-muted,
+[data-theme="dark"] .muted,
+[data-theme="dark"] .small {
+  color: var(--muted) !important;
+}
+
+[data-theme="dark"] a { color: var(--link); }
+[data-theme="dark"] a:hover { color: #b0c9ff; }
+
+/* Butoane primare mai blânde */
+[data-theme="dark"] .btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary-contrast);
+}
+[data-theme="dark"] .btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+[data-theme="dark"] .btn-outline-primary:hover {
+  background-color: var(--primary);
+  color: var(--primary-contrast);
+}
+
+/* Carousel caption mai aerisit, fără „cutie” foarte închisă */
+[data-theme="dark"] .bg-blur {
+  background: var(--overlay-strong);
+  backdrop-filter: blur(6px);
+}
+
+/* Overlay pe cardurile de categorie – mai transparent pentru imagine */
+[data-theme="dark"] .category-overlay,
+[data-theme="dark"] .card .overlay {
+  background: var(--overlay-soft);
+  color: var(--text);
+}
+
+/* Borduri de tabel/elemente */
+[data-theme="dark"] .table,
+[data-theme="dark"] .table > :not(caption) > * > * {
+  color: var(--text);
+  border-color: var(--border);
+  background-color: transparent;
+}
+
+/* Iconițe social/secondary */
+[data-theme="dark"] .text-muted { color: var(--muted) !important; }
+
+
+html, body { height: 100%; }
+body { font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--bg); color: var(--fg); }
+
+
+.bg-body-tertiary { background-color: var(--bg) !important; }
+.navbar .nav-link.active { font-weight: 600; text-decoration: underline; }
+
+
+.bg-blur { backdrop-filter: blur(6px); background-color: rgba(0,0,0,.35); }
+
+
+.card { background: var(--card); border: 1px solid rgba(0,0,0,.05); }
+
+
+/* Spațiu sub navbar fix */
+main.container, header.container { scroll-margin-top: 80px; }
+body { padding-top: 72px; }
+
+
+/* Butoane UP/DOWN */
+.scroll-buttons { position: fixed; bottom: 20px; right: 20px; z-index: 1080; }
+.scroll-buttons .btn { width: 44px; height: 44px; border-radius: 22px; display: grid; place-items: center; }
+
+
+/* Form */
+.form-control, .form-select { background-color: var(--bg); color: var(--fg); }
+.form-control::placeholder { color: #888; }
+
+
+/* Footer */
+footer { background: transparent; }
+
+
+/* Utilitare */
+.rounded-4 { border-radius: 1rem !important; }
+.shadow-sm { box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important; }
+
+/* toate imaginile din carusel */
+#heroCarousel .carousel-item img {
+  max-height: 520px;
+  width: 100%;
+  object-fit: cover;   /* umple cadrul fără deformare */
+}
+
+/* pe ecrane mici: puțin mai mic */
+@media (max-width: 767.98px) {
+  #heroCarousel .carousel-item img { max-height: 360px; }
+}
+
+/*tipografia detaliilor din card*/
+.recipe-card .card-body ul.small,
+.recipe-card .card-body ol.small {
+  margin-left: 1rem;
+}
+.recipe-card .card-body h6 {
+  margin-top: .25rem;
+}
+
+/*RETETA SAPTAMANII*/
+/* ===== Weekly Feature ===== */
+.weekly-feature {
+  border-radius: 1rem;
+  background:
+    radial-gradient(1200px 600px at 120% -10%, rgba(13,110,253,.08), transparent 60%),
+    radial-gradient(900px 500px at -20% 110%, rgba(255,193,7,.07), transparent 55%),
+    var(--bs-body-bg);
+}
+
+.weekly-title {
+  font-weight: 800;
+  letter-spacing: -.02em;
+  line-height: 1.1;
+  font-size: clamp(1.6rem, 2.5vw + .8rem, 2.4rem);
+}
+
+.weekly-subtle {
+  color: var(--bs-secondary-color);
+  font-size: clamp(1rem, .4vw + .9rem, 1.125rem);
+}
+
+/* Panglică peste imagine */
+.weekly-ribbon {
+  position: absolute;
+  top: 1rem; left: 1rem;
+  padding: .35rem .75rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: .9rem;
+  color: #fff;
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  box-shadow: 0 6px 20px rgba(13,110,253,.35);
+  backdrop-filter: saturate(140%) blur(6px);
+}
+
+/* „Chip”-uri info */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .35rem .6rem;
+  border-radius: 999px;
+  font-size: .875rem;
+  background: var(--bs-body-bg);
+  border: 1px solid var(--bs-border-color);
+  color: var(--bs-body-color);
+}
+
+/* imaginea din stânga să umple frumos */
+.object-fit-cover { object-fit: cover; }
+
+/* mici ajustări pe mobil */
+@media (max-width: 767.98px) {
+  .weekly-ribbon { top: .75rem; left: .75rem; font-size: .8rem; }
+}
+
+/* Dimensiuni fixe doar pentru imaginea de la supa de pui cu gnocchi
+#supa-gnocchi-pui img {
+  height: 275px;
+  object-fit: cover;
+  object-position: center;
+}*/
+
+/* Adaugă acest cod nou - observă selectorul modificat pentru a ținti exact imaginea: */
+.weekly-feature img.w-100 {
+  height: 420px !important;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 767.98px) {
+  .weekly-feature img.w-100 {
+    height: 250px !important;
+  }
+}
+
+/* Imagine mare pe Despre */
+.about-img-wrap { height: 360px; }           /* ajustează 360 → 420/480 dacă vrei și mai mare */
+.about-img { object-fit: cover; object-position: center; }
+
+/* pe ecrane mici, las-o mai înaltă pentru impact */
+@media (max-width: 767.98px) {
+  .about-img-wrap { height: 260px; }
+}
