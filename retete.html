@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="ro" data-theme="light">
+
 <head>
 
   <!-- COD GOOGLE ANALYTICS-->
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8FR2CTBEF2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8FR2CTBEF2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-8FR2CTBEF2');
-</script>
+    gtag('config', 'G-8FR2CTBEF2');
+  </script>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,12 +24,14 @@
   <!-- CSS-ul tău -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
   <!-- NAVBAR FIX -->
   <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top shadow-sm">
     <div class="container">
       <a class="navbar-brand fw-bold" href="index.html">🍳 Rețete Delicioase</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav"
+        aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="nav">
@@ -40,8 +43,10 @@
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
         <div class="ms-lg-3 d-flex gap-2 align-items-center">
-          <button id="themeToggle" class="btn btn-outline-secondary btn-sm" aria-label="Schimbă tema"><i class="bi bi-moon-stars"></i></button>
-          <a class="text-secondary fs-5" href="#" data-bs-toggle="modal" data-bs-target="#helpModal" aria-label="Ajutor"><i class="bi bi-question-circle"></i></a>
+          <button id="themeToggle" class="btn btn-outline-secondary btn-sm" aria-label="Schimbă tema"><i
+              class="bi bi-moon-stars"></i></button>
+          <a class="text-secondary fs-5" href="#" data-bs-toggle="modal" data-bs-target="#helpModal"
+            aria-label="Ajutor"><i class="bi bi-question-circle"></i></a>
         </div>
       </div>
     </div>
@@ -52,7 +57,8 @@
       <h1 class="h2">Toate rețetele</h1>
       <div class="row g-2 align-items-center mt-2">
         <div class="col-12 col-md-6">
-          <input id="search" type="search" class="form-control" placeholder="Caută după nume, ingredient sau categorie…" aria-label="Căutare rețete" />
+          <input id="search" type="search" class="form-control" placeholder="Caută după nume, ingredient sau categorie…"
+            aria-label="Căutare rețete" />
         </div>
         <div class="col-6 col-md-3">
           <select id="filter" class="form-select" aria-label="Filtru categorie">
@@ -67,681 +73,808 @@
 
     <section id="recipesGrid" class="row g-4">
       <!-- CARD EXPANDABIL: Supă de pui cu gnocchi -->
-<article id="supa-gnocchi-pui"
-         class="col-12 col-md-6 col-lg-4 recipe-card"
-         data-category="Supe/Ciorbe"
-         data-tags="supa ciorba pui gnocchi felul 1 olive garden"
-         data-title="supa de pui cu gnocchi stil olive garden">
-  <div class="card h-100">
-    <img src="assets/img/supa_pui.webp" class="card-img-top" alt="Supă de pui cu gnocchi" />
-    <div class="card-body">
+      <article id="supa-gnocchi-pui" class="col-12 col-md-6 col-lg-4 recipe-card" data-category="Supe/Ciorbe"
+        data-tags="supa ciorba pui gnocchi felul 1 olive garden" data-title="supa de pui cu gnocchi stil olive garden">
+        <div class="card h-100">
+          <img src="assets/img/supa_pui.webp" class="card-img-top" alt="Supă de pui cu gnocchi" />
+          <div class="card-body">
 
-      <!-- REZUMAT (vizibil inițial) -->
-      <div class="summary">
-        <h5 class="card-title">Supă de pui cu gnocchi</h5>
-        <p class="card-text small">Cremă ușoară, cu piept de pui, gnocchi și spanac — varianta „Olive Garden”.</p>
-        <table class="table table-sm table-striped small mb-3">
-          <thead><tr><th>Calorii</th><th>Proteine</th><th>Grăsimi</th><th>Timp</th></tr></thead>
-          <tbody><tr><td>75kcal</td><td>6gr</td><td>4gr</td><td>~35–45 min</td></tr></tbody>
-        </table>
+            <!-- REZUMAT (vizibil inițial) -->
+            <div class="summary">
+              <h5 class="card-title">Supă de pui cu gnocchi</h5>
+              <p class="card-text small">Cremă ușoară, cu piept de pui, gnocchi și spanac — varianta „Olive Garden”.</p>
+              <table class="table table-sm table-striped small mb-3">
+                <thead>
+                  <tr>
+                    <th>Calorii</th>
+                    <th>Proteine</th>
+                    <th>Grăsimi</th>
+                    <th>Timp</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>75kcal</td>
+                    <td>6gr</td>
+                    <td>4gr</td>
+                    <td>~35–45 min</td>
+                  </tr>
+                </tbody>
+              </table>
 
-        <!-- butonul care DESCHIDE detaliile -->
-        <button class="btn btn-primary"
-                data-bs-toggle="collapse"
-                data-bs-target="#det-supa-gnocchi">
-          Vezi rețeta
-        </button>
+              <!-- butonul care DESCHIDE detaliile -->
+              <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#det-supa-gnocchi">
+                Vezi rețeta
+              </button>
 
-      <a href="video.html#video-supa-gnocchi" class="btn btn-outline-danger ms-2">
-           <i class="bi bi-play-circle"></i> Vezi video
-      </a>
+              <a href="video.html#video-supa-gnocchi" class="btn btn-outline-danger ms-2">
+                <i class="bi bi-play-circle"></i> Vezi video
+              </a>
 
-      </div>
+            </div>
 
-      <!-- DETALII (ascunse inițial) -->
-      <div id="det-supa-gnocchi" class="collapse mt-2">
-        <h6 class="fw-bold">Ingrediente</h6>
-        <ul class="small mb-3">
-          <li>3 linguri ulei de măsline extra-virgin</li>
-          <li>1½ căni ceapă galbenă tocată</li>
-          <li>¾ cană țelină tăiată felii</li>
-          <li>2 linguri usturoi mărunțit</li>
-          <li>2 lingurițe frunze de cimbru proaspăt</li>
-          <li>5 căni supă de pui (cu sodiu redus)</li>
-          <li>¾ cană morcovi „matchstick” (bastonașe subțiri)</li>
-          <li>½ linguriță piper măcinat</li>
-          <li>⅛ linguriță sare</li>
-          <li>1 piept de pui cu os (~400 g), fără piele</li>
-          <li>1 pachet (340 g) gnocchi de cartofi, refrigerat</li>
-          <li>3 căni baby spanac, tocat grosier</li>
-          <li>½ cană half-and-half (sau ¼ cană smântână pt. gătit + ¼ cană lapte integral)</li>
-          <li>2 linguri amidon de porumb</li>
-        </ul>
+            <!-- DETALII (ascunse inițial) -->
+            <div id="det-supa-gnocchi" class="collapse mt-2">
+              <h6 class="fw-bold">Ingrediente</h6>
+              <ul class="small mb-3">
+                <li>3 linguri ulei de măsline extra-virgin</li>
+                <li>1½ căni ceapă galbenă tocată</li>
+                <li>¾ cană țelină tăiată felii</li>
+                <li>2 linguri usturoi mărunțit</li>
+                <li>2 lingurițe frunze de cimbru proaspăt</li>
+                <li>5 căni supă de pui (cu sodiu redus)</li>
+                <li>¾ cană morcovi „matchstick” (bastonașe subțiri)</li>
+                <li>½ linguriță piper măcinat</li>
+                <li>⅛ linguriță sare</li>
+                <li>1 piept de pui cu os (~400 g), fără piele</li>
+                <li>1 pachet (340 g) gnocchi de cartofi, refrigerat</li>
+                <li>3 căni baby spanac, tocat grosier</li>
+                <li>½ cană half-and-half (sau ¼ cană smântână pt. gătit + ¼ cană lapte integral)</li>
+                <li>2 linguri amidon de porumb</li>
+              </ul>
 
-        <h6 class="fw-bold">Instrucțiuni</h6>
-        <ol class="small mb-3">
-          <li><strong>Sotează baza:</strong> Încălzește uleiul; adaugă ceapa și țelina ~5 min. Pune usturoiul și cimbrul ~1 min.</li>
-          <li><strong>Fierbe puiul:</strong> Adaugă supa, morcovii, piperul, sarea și pieptul de pui; fierbere ușoară 15–20 min (până la 74°C). Scoate puiul.</li>
-          <li><strong>Gnocchi + spanac:</strong> Pune gnocchi ~5 min; mărunțește puiul și pune-l înapoi; adaugă spanacul până se înmoaie.</li>
-          <li><strong>Îngroașă:</strong> Amestecă half-and-half cu amidonul; toarnă în fir subțire, amestecând, ~2 min. Potrivește de sare/piper.</li>
-        </ol>
+              <h6 class="fw-bold">Instrucțiuni</h6>
+              <ol class="small mb-3">
+                <li><strong>Sotează baza:</strong> Încălzește uleiul; adaugă ceapa și țelina ~5 min. Pune usturoiul și
+                  cimbrul ~1 min.</li>
+                <li><strong>Fierbe puiul:</strong> Adaugă supa, morcovii, piperul, sarea și pieptul de pui; fierbere
+                  ușoară 15–20 min (până la 74°C). Scoate puiul.</li>
+                <li><strong>Gnocchi + spanac:</strong> Pune gnocchi ~5 min; mărunțește puiul și pune-l înapoi; adaugă
+                  spanacul până se înmoaie.</li>
+                <li><strong>Îngroașă:</strong> Amestecă half-and-half cu amidonul; toarnă în fir subțire, amestecând, ~2
+                  min. Potrivește de sare/piper.</li>
+              </ol>
 
-        <!-- butonul care ÎNCHIDE detaliile -->
-        <button class="btn btn-outline-secondary"
-                data-bs-toggle="collapse"
-                data-bs-target="#det-supa-gnocchi">
-          Ascunde
-        </button>
-      </div>
+              <!-- butonul care ÎNCHIDE detaliile -->
+              <button class="btn btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#det-supa-gnocchi">
+                Ascunde
+              </button>
+            </div>
 
-    </div>
-  </div>
-</article>
-
+          </div>
+        </div>
+      </article>
 
 
       <!-- CIORBĂ DE PERIȘOARE -->
-<article id="ciorba-perisoare"
-         class="col-12 col-md-6 col-lg-4 recipe-card"
-         data-category="Supe/Ciorbe"
-         data-tags="supa ciorba perisoare pui felul1"
-         data-title="ciorba de perisoare">
-  <div class="card h-100">
-    <img src="assets/img/ciorba_perisoare.webp" class="card-img-top" alt="Ciorbă de perișoare">
-    <div class="card-body">
+      <article id="ciorba-perisoare" class="col-12 col-md-6 col-lg-4 recipe-card" data-category="Supe/Ciorbe"
+        data-tags="supa ciorba perisoare pui felul1" data-title="ciorba de perisoare">
+        <div class="card h-100">
+          <img src="assets/img/ciorba_perisoare.webp" class="card-img-top" alt="Ciorbă de perișoare">
+          <div class="card-body d-flex flex-column">
 
-      <!-- Rezumat (vizibil inițial) -->
-      <div class="summary">
-        <h5 class="card-title">Ciorbă de perișoare</h5>
-        <p class="card-text small">Simplă, gustoasă, perfectă pentru familie.</p>
-        <table class="table table-sm table-striped small mb-3">
-          <thead><tr><th>Calorii</th><th>Proteine</th><th>Grăsimi</th><th>Timp</th></tr></thead>
-          <tbody><tr><td>186</td><td>11 g</td><td>11 g</td><td>~20 min</td></tr></tbody>
-        </table>
-        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#det-ciorba-perisoare">
-          Vezi rețeta
-        </button>
+            <!-- Rezumat (vizibil inițial) -->
+            <div class="summary d-flex flex-column">
+              <h5 class="card-title">Ciorbă de perișoare</h5>
+              <p class="card-text small">Simplă, gustoasă, perfectă pentru familie.</p>
+              <table class="table table-sm table-striped small mb-3">
+                <thead>
+                  <tr>
+                    <th>Calorii</th>
+                    <th>Proteine</th>
+                    <th>Grăsimi</th>
+                    <th>Timp</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>186</td>
+                    <td>11 g</td>
+                    <td>11 g</td>
+                    <td>~20 min</td>
+                  </tr>
+                </tbody>
+              </table>
 
-         <a href="https://www.youtube.com/watch?v=SEVbryAQlm8&t=3s" class="btn btn-outline-danger ms-2">
-           <i class="bi bi-play-circle"></i> Vezi video
-         </a>
+              <!-- Butoane aliniate la partea de jos -->
+              <div class="mt-auto d-flex flex-wrap gap-2">
+                <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#det-ciorba-perisoare">
+                  Vezi rețeta
+                </button>
+                <a href="https://www.youtube.com/watch?v=SEVbryAQlm8&t=3s" class="btn btn-outline-danger">
+                  <i class="bi bi-play-circle"></i> Vezi video
+                </a>
+              </div>
+            </div>
 
-      </div>
-      
+            <!-- Detalii (ascunse inițial) - MUTATĂ ÎN INTERIOR -->
+            <div id="det-ciorba-perisoare" class="collapse mt-2">
+              <h6 class="fw-bold">Ingrediente</h6>
 
-      <!-- Detalii (ascunse inițial) -->
-      <div id="det-ciorba-perisoare" class="collapse mt-2">
-        <h6 class="fw-bold">Ingrediente</h6>
+              <p class="mb-1 fw-semibold">Pentru perișoare:</p>
+              <ul class="small mb-3">
+                <li>500 g carne tocată de pui</li>
+                <li>1 legătură pătrunjel</li>
+                <li>1 ceapă mică, tocată mărunt</li>
+                <li>1 ou</li>
+                <li>Puțină sare</li>
+              </ul>
 
-        <p class="mb-1 fw-semibold">Pentru perișoare:</p>
-        <ul class="small mb-3">
-          <li>500 g carne tocată de pui</li>
-          <li>1 legătură pătrunjel</li>
-          <li>1 ceapă mică, tocată mărunt</li>
-          <li>1 ou</li>
-          <li>Puțină sare</li>
-        </ul>
+              <p class="mb-1 fw-semibold">Pentru ciorbă:</p>
+              <ul class="small mb-3">
+                <li>2 cepe, tocate mărunt</li>
+                <li>4–5 linguri ulei</li>
+                <li>2 ardei kapia, tocați mărunt</li>
+                <li>500 ml borș (fiert separat)</li>
+                <li>2 morcovi, tăiați cubulețe</li>
+                <li>1 rădăcină păstârnac, tăiată cubulețe</li>
+                <li>400 g roșii pasate</li>
+                <li>¼ țelină, tăiată cubulețe</li>
+                <li>1 legătură leuștean</li>
+                <li>Puțină sare</li>
+              </ul>
 
-        <p class="mb-1 fw-semibold">Pentru ciorbă:</p>
-        <ul class="small mb-3">
-          <li>2 cepe, tocate mărunt</li>
-          <li>4–5 linguri ulei</li>
-          <li>2 ardei kapia, tocați mărunt</li>
-          <li>500 ml borș (fiert separat)</li>
-          <li>2 morcovi, tăiați cubulețe</li>
-          <li>1 rădăcină păstârnac, tăiată cubulețe</li>
-          <li>400 g roșii pasate</li>
-          <li>¼ țelină, tăiată cubulețe</li>
-          <li>1 legătură leuștean</li>
-          <li>Puțină sare</li>
-        </ul>
+              <h6 class="fw-bold">Mod de preparare</h6>
+              <ol class="small mb-3">
+                <li><strong>Călește legumele:</strong> În ulei, călește ceapa, ardeiul și rădăcinoasele (morcov,
+                  păstârnac, țelină)
+                  tăiate cubulețe mici, până se înmoaie ușor.</li>
+                <li><strong>Fierbe baza:</strong> Adaugă apă și lasă să fiarbă; când legumele sunt aproape moi, pune
+                  orezul (dacă dorești în zeamă).</li>
+                <li><strong>Formează perișoarele:</strong> Amestecă carnea cu ceapa mică, oul, pătrunjelul, sare (și
+                  opțional puțină boia).
+                  Formează biluțe mici și adaugă-le în oala care fierbe ușor.</li>
+                <li><strong>Acidulează și finalizează:</strong> Când perișoarele sunt aproape gata, adaugă roșiile
+                  pasate și borșul fiert, după gust.
+                  Mai fierbe câteva minute. Potrivește de sare și presară leușteanul tocat.</li>
+                <li><em>Opțional:</em> Poți drege ciorba cu smântână și gălbenușuri pentru o variantă mai bogată.</li>
+              </ol>
 
-        <h6 class="fw-bold">Mod de preparare</h6>
-        <ol class="small mb-3">
-          <li><strong>Călește legumele:</strong> În ulei, călește ceapa, ardeiul și rădăcinoasele (morcov, păstârnac, țelină)
-              tăiate cubulețe mici, până se înmoaie ușor.</li>
-          <li><strong>Fierbe baza:</strong> Adaugă apă și lasă să fiarbă; când legumele sunt aproape moi, pune orezul (dacă dorești în zeamă).</li>
-          <li><strong>Formează perișoarele:</strong> Amestecă carnea cu ceapa mică, oul, pătrunjelul, sare (și opțional puțină boia).
-              Formează biluțe mici și adaugă-le în oala care fierbe ușor.</li>
-          <li><strong>Acidulează și finalizează:</strong> Când perișoarele sunt aproape gata, adaugă roșiile pasate și borșul fiert, după gust.
-              Mai fierbe câteva minute. Potrivește de sare și presară leușteanul tocat.</li>
-          <li><em>Opțional:</em> Poți drege ciorba cu smântână și gălbenușuri pentru o variantă mai bogată.</li>
-        </ol>
+              <button class="btn btn-outline-secondary" data-bs-toggle="collapse"
+                data-bs-target="#det-ciorba-perisoare">
+                Ascunde
+              </button>
+            </div>
 
-        <button class="btn btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#det-ciorba-perisoare">
-          Ascunde
-        </button>
-      </div>
-
-    </div>
-  </div>
-</article>
+          </div>
+        </div>
+      </article>
 
 
-<!-- SHAORMA ARĂBEASCĂ -->
-<article id="shaorma-arabeasca" 
-        class="col-12 col-md-6 col-lg-4 recipe-card"
-        data-category="Mancaruri"
-        data-tags="carne, orientala, street food" 
-        data-title="Shaorma arăbească de pui">
-  <div class="card h-100 shadow-sm">
-    <img src="assets/img/Shaorma-arabeasca.jpg" class="card-img-top" alt="Shaorma arăbească de pui" />
-    <div class="card-body d-flex flex-column">
-      <h5 class="card-title">Shaorma arăbească de pui</h5>
-      <p class="card-text small text-muted">
-        Aromată, suculentă, exact ca la shaormerie — dar făcută acasă.
-      </p>
+      <!-- SHAORMA ARĂBEASCĂ -->
+      <article id="shaorma-arabeasca" class="col-12 col-md-6 col-lg-4 recipe-card" data-category="Mancaruri"
+        data-tags="carne, orientala, street food" data-title="Shaorma arăbească de pui">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/img/Shaorma-arabeasca.jpg" class="card-img-top" alt="Shaorma arăbească de pui" />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Shaorma arăbească de pui</h5>
+            <p class="card-text small text-muted">
+              Aromată, suculentă, exact ca la shaormerie — dar făcută acasă.
+            </p>
 
-      <table class="table table-sm table-striped small mb-3">
-        <thead>
-          <tr><th>Calorii</th><th>Proteine</th><th>Grăsimi</th><th>Timp</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>220</td><td>17 g</td><td>9 g</td><td>~40 min</td></tr>
-        </tbody>
-      </table>
+            <table class="table table-sm table-striped small mb-3">
+              <thead>
+                <tr>
+                  <th>Calorii</th>
+                  <th>Proteine</th>
+                  <th>Grăsimi</th>
+                  <th>Timp</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>220</td>
+                  <td>17 g</td>
+                  <td>9 g</td>
+                  <td>~40 min</td>
+                </tr>
+              </tbody>
+            </table>
 
-      <!-- Butoane -->
-      <div class="mt-auto d-flex flex-wrap gap-2">
-        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#det-shaorma-arabeasca">
-          Vezi rețeta
-        </button>
-        <a href="https://www.youtube.com/watch?v=JAHHxQSvVVk" target="_blank" class="btn btn-outline-danger">
-          <i class="bi bi-play-circle"></i> Vezi video
-        </a>
-      </div>
-    </div>
+            <!-- Butoane -->
+            <div class="mt-auto d-flex flex-wrap gap-2">
+              <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#det-shaorma-arabeasca">
+                Vezi rețeta
+              </button>
+              <a href="https://www.youtube.com/watch?v=JAHHxQSvVVk" target="_blank" class="btn btn-outline-danger">
+                <i class="bi bi-play-circle"></i> Vezi video
+              </a>
+            </div>
+          </div>
 
-    <!-- DETALII RETETĂ -->
-    <div id="det-shaorma-arabeasca" class="collapse p-3 border-top small">
-      <h6 class="fw-bold text-primary mb-2">Ingrediente</h6>
+          <!-- DETALII RETETĂ -->
+          <div id="det-shaorma-arabeasca" class="collapse p-3 border-top small">
+            <h6 class="fw-bold text-primary mb-2">Ingrediente</h6>
 
-      <p class="mb-1 fw-semibold">Pentru carne:</p>
-      <ul class="list-unstyled mb-2">
-        <li>• 1 kg pulpe de pui fără os și fără piele</li>
-        <li>• 300 g iaurt</li>
-        <li>• 4–5 linguri ulei</li>
-        <li>• zeama de la 2 lămâi</li>
-        <li>• 4–5 căței de usturoi</li>
-        <li>• puțină sare</li>
-        <li>• 2 lingurițe Mix libanez 7 condimente</li>
-        <li>• 2 lingurițe Amestec Baharat 7 condimente arabești</li>
-        <li>• 1 linguriță boia dulce</li>
-        <li>• 1 linguriță turmeric / curcuma</li>
-        <li>• 2 lingurițe ceapă granulată</li>
-        <li>• 2 lingurițe zatar</li>
-      </ul>
+            <p class="mb-1 fw-semibold">Pentru carne:</p>
+            <ul class="list-unstyled mb-2">
+              <li>• 1 kg pulpe de pui fără os și fără piele</li>
+              <li>• 300 g iaurt</li>
+              <li>• 4–5 linguri ulei</li>
+              <li>• zeama de la 2 lămâi</li>
+              <li>• 4–5 căței de usturoi</li>
+              <li>• puțină sare</li>
+              <li>• 2 lingurițe Mix libanez 7 condimente</li>
+              <li>• 2 lingurițe Amestec Baharat 7 condimente arabești</li>
+              <li>• 1 linguriță boia dulce</li>
+              <li>• 1 linguriță turmeric / curcuma</li>
+              <li>• 2 lingurițe ceapă granulată</li>
+              <li>• 2 lingurițe zatar</li>
+            </ul>
 
-      <p class="mb-1 fw-semibold">Pentru salată:</p>
-      <ul class="list-unstyled mb-2">
-        <li>• salată de varză</li>
-        <li>• salată verde</li>
-        <li>• ceapă cu sumac</li>
-        <li>• castraveți murați</li>
-        <li>• roșii</li>
-      </ul>
+            <p class="mb-1 fw-semibold">Pentru salată:</p>
+            <ul class="list-unstyled mb-2">
+              <li>• salată de varză</li>
+              <li>• salată verde</li>
+              <li>• ceapă cu sumac</li>
+              <li>• castraveți murați</li>
+              <li>• roșii</li>
+            </ul>
 
-      <p class="mb-1 fw-semibold">Pentru sosuri:</p>
-      <ul class="list-unstyled mb-2">
-        <li>• sos de usturoi</li>
-        <li>• sos de tahini</li>
-        <li>• sos picant</li>
-        <li>• melasă de rodie (opțional)</li>
-      </ul>
+            <p class="mb-1 fw-semibold">Pentru sosuri:</p>
+            <ul class="list-unstyled mb-2">
+              <li>• sos de usturoi</li>
+              <li>• sos de tahini</li>
+              <li>• sos picant</li>
+              <li>• melasă de rodie (opțional)</li>
+            </ul>
 
-      <p class="mb-1 fw-semibold">Pentru asamblare:</p>
-      <ul class="list-unstyled mb-2">
-        <li>• 6 lipii pentru shaorma (de preferat tip tortilla)</li>
-      </ul>
+            <p class="mb-1 fw-semibold">Pentru asamblare:</p>
+            <ul class="list-unstyled mb-2">
+              <li>• 6 lipii pentru shaorma (de preferat tip tortilla)</li>
+            </ul>
 
-      <h6 class="fw-bold text-primary mt-3">Mod de preparare</h6>
-      <p>
-        Pentru o <strong>shaorma arăbească de pui</strong> gustoasă și aromată, carnea trebuie
-        lăsată la marinat cât mai mult — ideal peste noapte, în frigider.
-        Dacă vă grăbiți, lăsați-o măcar 30–60 de minute.
-        Legumele și sosurile se pot adapta după preferințe — eu am folosit
-        sos de tahini, picant și de usturoi, plus puțină melasă de rodie pentru un gust special.
-        Lipiile pot fi cumpărate sau făcute în casă, tip tortilla.
-        Este o rețetă simplă, dar foarte aromată — perfectă de încercat acasă!
-      </p>
-    </div>
-  </div>
-</article>
+            <h6 class="fw-bold text-primary mt-3">Mod de preparare</h6>
+            <p>
+              Pentru o <strong>shaorma arăbească de pui</strong> gustoasă și aromată, carnea trebuie
+              lăsată la marinat cât mai mult — ideal peste noapte, în frigider.
+              Dacă vă grăbiți, lăsați-o măcar 30–60 de minute.
+              Legumele și sosurile se pot adapta după preferințe — eu am folosit
+              sos de tahini, picant și de usturoi, plus puțină melasă de rodie pentru un gust special.
+              Lipiile pot fi cumpărate sau făcute în casă, tip tortilla.
+              Este o rețetă simplă, dar foarte aromată — perfectă de încercat acasă!
+            </p>
+          </div>
+        </div>
+      </article>
 
 
       <!-- FRIGĂRUI DE VITĂ CU LEGUME -->
-<article id="frigarui-vita-legume"
-         class="col-12 col-md-6 col-lg-4 recipe-card"
-         data-category="Mancaruri"
-         data-tags="felul2 vita gratar legume frigărui"
-         data-title="frigarui de vita cu legume asortate">
-  <div class="card h-100 shadow-sm">
-    <img src="assets/img/Frigarui_de_vita.jpg" class="card-img-top" alt="Frigărui de vită cu legume asortate" />
-    <div class="card-body d-flex flex-column">
+      <article id="frigarui-vita-legume" class="col-12 col-md-6 col-lg-4 recipe-card" data-category="Mancaruri"
+        data-tags="felul2 vita gratar legume frigărui" data-title="frigarui de vita cu legume asortate">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/img/Frigarui_de_vita.jpg" class="card-img-top" alt="Frigărui de vită cu legume asortate" />
+          <div class="card-body d-flex flex-column">
 
-      <!-- Rezumat -->
-      <div class="summary">
-        <h5 class="card-title">Frigărui de vită cu legume</h5>
-        <p class="card-text small">Antricot fraged marinat, legume sotate aromate — rapid și spectaculos.</p>
-        <table class="table table-sm table-striped small mb-3">
-          <thead><tr><th>Calorii</th><th>Proteine</th><th>Grăsimi</th><th>Timp</th></tr></thead>
-          <tbody><tr><td>~368</td><td>~25 g</td><td>~26 g</td><td>~45 min</td></tr></tbody>
-        </table>
-        <div class="d-flex flex-wrap gap-2">
-          <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#det-frigarui-vita">
-            Vezi rețeta
-          </button>
-          <a href="https://youtu.be/WE67TVV_SL4" target="_blank" class="btn btn-outline-danger">
-            <i class="bi bi-play-circle"></i> Vezi video
-          </a>
+            <!-- Rezumat -->
+            <div class="summary">
+              <h5 class="card-title">Frigărui de vită cu legume</h5>
+              <p class="card-text small">Antricot fraged marinat, legume sotate aromate — rapid și spectaculos.</p>
+              <table class="table table-sm table-striped small mb-3">
+                <thead>
+                  <tr>
+                    <th>Calorii</th>
+                    <th>Proteine</th>
+                    <th>Grăsimi</th>
+                    <th>Timp</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>~368</td>
+                    <td>~25 g</td>
+                    <td>~26 g</td>
+                    <td>~45 min</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#det-frigarui-vita">
+                  Vezi rețeta
+                </button>
+                <a href="https://youtu.be/WE67TVV_SL4" target="_blank" class="btn btn-outline-danger">
+                  <i class="bi bi-play-circle"></i> Vezi video
+                </a>
+              </div>
+            </div>
+
+            <!-- Detalii (ascunse inițial) -->
+            <div id="det-frigarui-vita" class="collapse mt-3">
+              <h6 class="fw-bold text-primary">Ingrediente</h6>
+
+              <p class="mb-1 fw-semibold">Carne & legume</p>
+              <ul class="small mb-2">
+                <li>700 g antricot de vită</li>
+                <li>10 buc. sparanghel</li>
+                <li>5 ciuperci</li>
+                <li>1 ardei gras roșu, 1 verde, 1 galben</li>
+                <li>½ dovlecel</li>
+                <li>1 ceapă tăiată solzișori</li>
+                <li>1 căpățână usturoi</li>
+                <li>4–5 linguri ulei de măsline</li>
+                <li>Zeama de la 2 lămâi</li>
+                <li>Sare, piper</li>
+                <li>1 lingură boia dulce</li>
+                <li>Ierburi aromatice proaspete (salvie, cimbru, rozmarin, oregano, chives, pătrunjel, 1 frunză dafin)
+                </li>
+              </ul>
+
+              <h6 class="fw-bold text-primary mt-3">Mod de preparare</h6>
+              <ol class="small mb-3">
+                <li><strong>Marinează carnea:</strong> Taie antricotul cuburi. Amestecă uleiul, zeama de lămâie,
+                  usturoiul zdrobit,
+                  ierburile tocate, boia, sare și piper. Pune carnea în marinadă min. 30 min (ideal câteva ore/peste
+                  noapte).</li>
+                <li><strong>Pregătește legumele:</strong> Taie ardeii, dovlecelul și ciupercile bucăți egale.
+                  Amestecă-le cu 1–2 linguri din
+                  marinada cărnii; condimentează ușor.</li>
+                <li><strong>Montează frigăruile:</strong> Pe bețe sau pe crenguțe groase de rozmarin curățate,
+                  alternează carne și legume.</li>
+                <li><strong>Gătire rapidă:</strong> La grătar/Optigrill/tigaie-grill bine încinsă, 8–12 min, întorcând
+                  des — bucățile de vită
+                  să rămână suculente (medium). Legumele se pot sota/grilla în paralel ~10–15 min.</li>
+                <li><strong>Servește:</strong> Lasă frigăruile 3–5 min la odihnă, presară ierburi proaspete; potrivește
+                  de sare/piper.</li>
+              </ol>
+
+              <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#det-frigarui-vita">
+                  Ascunde
+                </button>
+              </div>
+            </div>
+
+          </div>
         </div>
-      </div>
-
-      <!-- Detalii (ascunse inițial) -->
-      <div id="det-frigarui-vita" class="collapse mt-3">
-        <h6 class="fw-bold text-primary">Ingrediente</h6>
-
-        <p class="mb-1 fw-semibold">Carne & legume</p>
-        <ul class="small mb-2">
-          <li>700 g antricot de vită</li>
-          <li>10 buc. sparanghel</li>
-          <li>5 ciuperci</li>
-          <li>1 ardei gras roșu, 1 verde, 1 galben</li>
-          <li>½ dovlecel</li>
-          <li>1 ceapă tăiată solzișori</li>
-          <li>1 căpățână usturoi</li>
-          <li>4–5 linguri ulei de măsline</li>
-          <li>Zeama de la 2 lămâi</li>
-          <li>Sare, piper</li>
-          <li>1 lingură boia dulce</li>
-          <li>Ierburi aromatice proaspete (salvie, cimbru, rozmarin, oregano, chives, pătrunjel, 1 frunză dafin)</li>
-        </ul>
-
-        <h6 class="fw-bold text-primary mt-3">Mod de preparare</h6>
-        <ol class="small mb-3">
-          <li><strong>Marinează carnea:</strong> Taie antricotul cuburi. Amestecă uleiul, zeama de lămâie, usturoiul zdrobit,
-              ierburile tocate, boia, sare și piper. Pune carnea în marinadă min. 30 min (ideal câteva ore/peste noapte).</li>
-          <li><strong>Pregătește legumele:</strong> Taie ardeii, dovlecelul și ciupercile bucăți egale. Amestecă-le cu 1–2 linguri din
-              marinada cărnii; condimentează ușor.</li>
-          <li><strong>Montează frigăruile:</strong> Pe bețe sau pe crenguțe groase de rozmarin curățate, alternează carne și legume.</li>
-          <li><strong>Gătire rapidă:</strong> La grătar/Optigrill/tigaie-grill bine încinsă, 8–12 min, întorcând des — bucățile de vită
-              să rămână suculente (medium). Legumele se pot sota/grilla în paralel ~10–15 min.</li>
-          <li><strong>Servește:</strong> Lasă frigăruile 3–5 min la odihnă, presară ierburi proaspete; potrivește de sare/piper.</li>
-        </ol>
-
-        <div class="d-flex flex-wrap gap-2">
-          <button class="btn btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#det-frigarui-vita">
-            Ascunde
-          </button>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</article>
+      </article>
 
 
       <!-- PASTE CU FETA ȘI ROȘII CHERRY -->
-<article id="paste-feta-rosii"
-         class="col-12 col-md-6 col-lg-4 recipe-card"
-         data-category="Mancaruri"
-         data-tags="paste vegetarian feta rosii sos de cuptor"
-         data-title="paste cu branza feta si rosii cherry">
-  <div class="card h-100 shadow-sm">
-    <img src="assets/img/Paste_cu_branza.jpg" class="card-img-top" alt="Paste cu brânză feta și roșii cherry" />
-    <div class="card-body d-flex flex-column">
+      <article id="paste-feta-rosii" class="col-12 col-md-6 col-lg-4 recipe-card" data-category="Mancaruri"
+        data-tags="paste vegetarian feta rosii sos de cuptor" data-title="paste cu branza feta si rosii cherry">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/img/Paste_cu_branza.jpg" class="card-img-top" alt="Paste cu brânză feta și roșii cherry" />
+          <div class="card-body d-flex flex-column">
 
-      <!-- Rezumat -->
-      <div class="summary">
-        <h5 class="card-title">Paste cu feta & roșii cherry</h5>
-        <p class="card-text small">Sos cremos din feta coaptă cu roșii dulci – simplu și irezistibil.</p>
-        <table class="table table-sm table-striped small mb-3">
-          <thead><tr><th>Calorii</th><th>Proteine</th><th>Grăsimi</th><th>Timp</th></tr></thead>
-          <tbody><tr><td>~512</td><td>~19 g</td><td>~25 g</td><td>~1h 15min</td></tr></tbody>
-        </table>
-        <div class="d-flex flex-wrap gap-2">
-          <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#det-paste-feta">
-            Vezi rețeta
-          </button>
-          <a href="https://youtu.be/wHl84cXp2R4" target="_blank" class="btn btn-outline-danger">
-            <i class="bi bi-play-circle"></i> Vezi video
-          </a>
+            <!-- Rezumat -->
+            <div class="summary">
+              <h5 class="card-title">Paste cu feta & roșii cherry</h5>
+              <p class="card-text small">Sos cremos din feta coaptă cu roșii dulci – simplu și irezistibil.</p>
+              <table class="table table-sm table-striped small mb-3">
+                <thead>
+                  <tr>
+                    <th>Calorii</th>
+                    <th>Proteine</th>
+                    <th>Grăsimi</th>
+                    <th>Timp</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>~512</td>
+                    <td>~19 g</td>
+                    <td>~25 g</td>
+                    <td>~1h 15min</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#det-paste-feta">
+                  Vezi rețeta
+                </button>
+                <a href="https://youtu.be/wHl84cXp2R4" target="_blank" class="btn btn-outline-danger">
+                  <i class="bi bi-play-circle"></i> Vezi video
+                </a>
+              </div>
+            </div>
+
+            <!-- Detalii (ascunse inițial) -->
+            <div id="det-paste-feta" class="collapse mt-3">
+              <h6 class="fw-bold text-primary">Ingrediente</h6>
+              <ul class="small mb-3">
+                <li>400 g brânză feta (DOP, grecească)</li>
+                <li>1 kg roșii cherry, bine coapte</li>
+                <li>350 g paste (penne, fusilli, farfalle etc.)</li>
+                <li>4–5 linguri ulei de măsline extravirgin</li>
+                <li>4–5 căței de usturoi, curățați</li>
+                <li>1 lingură oregano uscat</li>
+                <li>1 linguriță fulgi de chilli (după gust)</li>
+                <li>puțin busuioc proaspăt</li>
+                <li>puțin piper proaspăt măcinat</li>
+              </ul>
+
+              <h6 class="fw-bold text-primary">Mod de preparare</h6>
+              <ol class="small mb-3">
+                <li><strong>Coace sosul:</strong> Într-o tavă, pune brânza feta în centru. În jur, adaugă roșiile
+                  cherry,
+                  usturoiul întreg, uleiul de măsline, oregano, chilli și piper. Amestecă roșiile, apoi coace la
+                  200°C ~25–30 min, până când roșiile crapă și feta se înmoaie.</li>
+                <li><strong>Fierbe pastele:</strong> În timp ce sosul e la cuptor, fierbe pastele al dente în apă bine
+                  sărată.
+                  Păstrează o cană din apa amidonată a pastelor.</li>
+                <li><strong>Amestecă:</strong> Scoate tava, strivește roșiile și feta cu o lingură până devine un sos
+                  cremos.
+                  Adaugă pastele scurse și puțin din apa de la paste, amestecând până se leagă frumos.</li>
+                <li><strong>Finalizează:</strong> Potrivește de condimente și presară busuioc proaspăt. Servește
+                  imediat.</li>
+              </ol>
+
+              <button class="btn btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#det-paste-feta">
+                Ascunde
+              </button>
+            </div>
+
+          </div>
         </div>
-      </div>
-
-      <!-- Detalii (ascunse inițial) -->
-      <div id="det-paste-feta" class="collapse mt-3">
-        <h6 class="fw-bold text-primary">Ingrediente</h6>
-        <ul class="small mb-3">
-          <li>400 g brânză feta (DOP, grecească)</li>
-          <li>1 kg roșii cherry, bine coapte</li>
-          <li>350 g paste (penne, fusilli, farfalle etc.)</li>
-          <li>4–5 linguri ulei de măsline extravirgin</li>
-          <li>4–5 căței de usturoi, curățați</li>
-          <li>1 lingură oregano uscat</li>
-          <li>1 linguriță fulgi de chilli (după gust)</li>
-          <li>puțin busuioc proaspăt</li>
-          <li>puțin piper proaspăt măcinat</li>
-        </ul>
-
-        <h6 class="fw-bold text-primary">Mod de preparare</h6>
-        <ol class="small mb-3">
-          <li><strong>Coace sosul:</strong> Într-o tavă, pune brânza feta în centru. În jur, adaugă roșiile cherry,
-              usturoiul întreg, uleiul de măsline, oregano, chilli și piper. Amestecă roșiile, apoi coace la
-              200°C ~25–30 min, până când roșiile crapă și feta se înmoaie.</li>
-          <li><strong>Fierbe pastele:</strong> În timp ce sosul e la cuptor, fierbe pastele al dente în apă bine sărată.
-              Păstrează o cană din apa amidonată a pastelor.</li>
-          <li><strong>Amestecă:</strong> Scoate tava, strivește roșiile și feta cu o lingură până devine un sos cremos.
-              Adaugă pastele scurse și puțin din apa de la paste, amestecând până se leagă frumos.</li>
-          <li><strong>Finalizează:</strong> Potrivește de condimente și presară busuioc proaspăt. Servește imediat.</li>
-        </ol>
-
-        <button class="btn btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#det-paste-feta">
-          Ascunde
-        </button>
-      </div>
-
-    </div>
-  </div>
-</article>
+      </article>
 
 
       <!-- PAPANAȘI PUFOȘI CU BRÂNZĂ DE VACĂ -->
-<article id="papanasi-pufosi"
-         class="col-12 col-md-6 col-lg-4 recipe-card"
-         data-category="Deserturi"
-         data-tags="dulciuri desert prajit papanasi branza"
-         data-title="papanasi pufosi cu branza de vaca">
-  <div class="card h-100 shadow-sm">
-    <img src="assets/img/Papanasi.jpg" class="card-img-top" alt="Papanși pufoși cu brânză de vacă" />
-    <div class="card-body d-flex flex-column">
+      <article id="papanasi-pufosi" class="col-12 col-md-6 col-lg-4 recipe-card" data-category="Deserturi"
+        data-tags="dulciuri desert prajit papanasi branza" data-title="papanasi pufosi cu branza de vaca">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/img/Papanasi.jpg" class="card-img-top" alt="Papanși pufoși cu brânză de vacă" />
+          <div class="card-body d-flex flex-column">
 
-      <!-- Rezumat -->
-      <div class="summary">
-        <h5 class="card-title">Papanși pufoși cu brânză de vacă</h5>
-        <p class="card-text small">Clasici, prăjiți în baie de ulei, cu smântână și dulceață de vișine.</p>
-        <table class="table table-sm table-striped small mb-3">
-          <thead><tr><th>Calorii</th><th>Proteine</th><th>Grăsimi</th><th>Timp</th></tr></thead>
-          <tbody><tr><td>~480</td><td>~17 g</td><td>~12 g</td><td>~50 min</td></tr></tbody>
-        </table>
-        <div class="d-flex flex-wrap gap-2">
-          <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#det-papanasi-pufosi">
-            Vezi rețeta
-          </button>
-          <a href="https://youtu.be/AnB18Ag_33A" target="_blank" class="btn btn-outline-danger">
-            <i class="bi bi-play-circle"></i> Vezi video
-          </a>
+            <!-- Rezumat -->
+            <div class="summary">
+              <h5 class="card-title">Papanși pufoși cu brânză de vacă</h5>
+              <p class="card-text small">Clasici, prăjiți în baie de ulei, cu smântână și dulceață de vișine.</p>
+              <table class="table table-sm table-striped small mb-3">
+                <thead>
+                  <tr>
+                    <th>Calorii</th>
+                    <th>Proteine</th>
+                    <th>Grăsimi</th>
+                    <th>Timp</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>~480</td>
+                    <td>~17 g</td>
+                    <td>~12 g</td>
+                    <td>~50 min</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#det-papanasi-pufosi">
+                  Vezi rețeta
+                </button>
+                <a href="https://youtu.be/AnB18Ag_33A" target="_blank" class="btn btn-outline-danger">
+                  <i class="bi bi-play-circle"></i> Vezi video
+                </a>
+              </div>
+            </div>
+
+            <!-- Detalii (ascunse inițial) -->
+            <div id="det-papanasi-pufosi" class="collapse mt-3">
+              <h6 class="fw-bold text-primary">Ingrediente</h6>
+              <ul class="small mb-3">
+                <li>500 g brânză dulce de vaci (grasă, bine scursă)</li>
+                <li>2 ouă</li>
+                <li>300 g făină</li>
+                <li>30 g zahăr</li>
+                <li>5 g bicarbonat de sodiu</li>
+                <li>1 lingură extract de vanilie</li>
+                <li>1 lingură extract de lămâie</li>
+                <li>un praf de sare</li>
+                <li>ulei pentru prăjit (baie de ulei)</li>
+                <li>200 g smântână grasă, 200 g dulceață de vișine (servire)</li>
+              </ul>
+
+              <h6 class="fw-bold text-primary">Mod de preparare</h6>
+              <ol class="small mb-3">
+                <li><strong>Aluatul:</strong> Amestecă brânza bine scursă cu ouăle, zahărul, sarea și aromele.
+                  Adaugă făina și bicarbonatul; frământă doar cât să se încorporeze — nu exagera ca să rămână pufoși.
+                </li>
+                <li><strong>Modelare:</strong> Împarte aluatul în 6 bucăți. Din fiecare formează un inel (papanășul)
+                  și o biluță mică pentru deasupra.</li>
+                <li><strong>Prăjire:</strong> Prăjește în baie de ulei la foc mediu spre mic ~5–6 minute, până se
+                  rumenesc
+                  frumos și sunt gătiți la interior. Scoate pe șervețele.</li>
+                <li><strong>Servire:</strong> Lasă 5–10 minute la răcit, apoi pune smântână și dulceață de vișine.
+                  Servește imediat — pufos și delicios!</li>
+              </ol>
+
+              <button class="btn btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#det-papanasi-pufosi">
+                Ascunde
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </article>
+
+
+      <!-- PANCAKES DE POST -->
+      <article id="pancakes-post" class="col-12 col-md-6 col-lg-4 recipe-card" data-category="Deserturi"
+        data-tags="dulciuri mic-dejun clatite pancakes de post" data-title="pancakes de post pufoase">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/img/Pancakes.jpg" class="card-img-top" alt="Pancakes de post pufoase" />
+          <div class="card-body d-flex flex-column">
+
+            <!-- Rezumat -->
+            <div class="summary">
+              <h5 class="card-title">Pancakes pufoase</h5>
+              <p class="card-text small">Pufoase, aromate, perfecte pentru mic dejun sau desert — fără ouă, fără lapte.
+              </p>
+              <table class="table table-sm table-striped small mb-3">
+                <thead>
+                  <tr>
+                    <th>Calorii</th>
+                    <th>Proteine</th>
+                    <th>Grăsimi</th>
+                    <th>Timp</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>~139</td>
+                    <td>3 g</td>
+                    <td>3 g</td>
+                    <td>~35 min</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#det-pancakes-post">
+                  Vezi rețeta
+                </button>
+                <a href="https://youtu.be/BCedOLUVw8M" target="_blank" class="btn btn-outline-danger">
+                  <i class="bi bi-play-circle"></i> Vezi video
+                </a>
+              </div>
+            </div>
+
+            <!-- Detalii -->
+            <div id="det-pancakes-post" class="collapse mt-3">
+              <h6 class="fw-bold text-primary">Ingrediente</h6>
+              <ul class="small mb-3">
+                <li>330 ml băutură vegetală din migdale (Alpro)</li>
+                <li>250 g făină</li>
+                <li>30 g zahăr vanilat</li>
+                <li>20 ml ulei</li>
+                <li>15 g praf de copt</li>
+                <li>1 linguriță esență de lămâie</li>
+                <li>un praf de sare</li>
+              </ul>
+
+              <h6 class="fw-bold text-primary">Mod de preparare</h6>
+              <ol class="small mb-3">
+                <li><strong>Compoziția:</strong> Amestecă făina, zahărul, praful de copt și sarea. Adaugă băutura
+                  vegetală,
+                  uleiul și esența de lămâie. Omogenizează până obții un aluat gros, dar curgător.</li>
+                <li><strong>Coacerea:</strong> Toarnă compoziția în tigaia antiaderentă încinsă și coace clătitele la
+                  foc
+                  potrivit 1-2 minute pe fiecare parte, până devin aurii.</li>
+                <li><strong>Servire:</strong> Servește-le cu fructe proaspete, sirop de arțar, ciocolată sau cremă de
+                  alune —
+                  după gust.</li>
+              </ol>
+
+              <button class="btn btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#det-pancakes-post">
+                Ascunde
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </article>
+
+
+      <!-- CHEESECAKE SAN SEBASTIÁN -->
+      <article id="cheesecake-san-sebastian" class="col-12 col-md-6 col-lg-4 recipe-card" data-category="Deserturi"
+        data-tags="dulciuri cheesecake cuptor san sebastian" data-title="cheesecake san sebastian">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/img/Cheesecake.jpg" class="card-img-top" alt="Cheesecake San Sebastián" />
+          <div class="card-body d-flex flex-column">
+
+            <!-- Rezumat -->
+            <div class="summary">
+              <h5 class="card-title">Cheesecake</h5>
+              <p class="card-text small">Cremă densă, coajă caramelizată, fără blat — servit rece, irezistibil.</p>
+              <table class="table table-sm table-striped small mb-3">
+                <thead>
+                  <tr>
+                    <th>Calorii</th>
+                    <th>Proteine</th>
+                    <th>Grăsimi</th>
+                    <th>Timp</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>~424</td>
+                    <td>~7 g</td>
+                    <td>~35 g</td>
+                    <td>~55 min</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#det-cheesecake-san">
+                  Vezi rețeta
+                </button>
+                <a href="https://youtu.be/085HewMazqo" target="_blank" class="btn btn-outline-danger">
+                  <i class="bi bi-play-circle"></i> Vezi video
+                </a>
+              </div>
+            </div>
+
+            <!-- Detalii (ascunse inițial) -->
+            <div id="det-cheesecake-san" class="collapse mt-3">
+              <h6 class="fw-bold text-primary">Ingrediente</h6>
+              <ul class="small mb-3">
+                <li>6 ouă (la temperatura camerei)</li>
+                <li>1 kg cremă de brânză (tip cream cheese, NU brânză de vaci/ricotta)</li>
+                <li>500 ml smântână pentru frișcă (smântână dulce, nu vegetală)</li>
+                <li>250 g zahăr cu aromă de vanilie</li>
+                <li>60 g făină</li>
+                <li>Zeama și coaja de la 1 lămâie</li>
+                <li>Un praf de sare</li>
+              </ul>
+
+              <h6 class="fw-bold text-primary">Mod de preparare</h6>
+              <ol class="small mb-3">
+                <li><strong>Încălzește cuptorul</strong> la 210–220°C. Tapetează o formă rotundă (22–24 cm) cu hârtie de
+                  copt
+                  ridicată pe margini (efect „șifonat”). Toate ingredientele trebuie să fie la temperatura camerei.</li>
+                <li><strong>Cremă:</strong> Bate scurt crema de brânză cu zahărul și sarea până devine netedă.
+                  Adaugă pe rând ouăle, apoi smântâna pentru frișcă. Încorporează făina cernută, zeama și coaja de
+                  lămâie.
+                  Amestecă doar cât să fie omogen (fără a incorpora aer excesiv).</li>
+                <li><strong>Coacere:</strong> Toarnă compoziția în formă și coace ~45–55 min la 210–220°C,
+                  până suprafața se caramelizează bine (maro-închis), iar centrul încă tremură ușor.</li>
+                <li><strong>Răcire:</strong> Lasă cheesecake-ul să ajungă la temperatura camerei, apoi răcește-l la
+                  frigider
+                  cel puțin 4–6 ore (ideal peste noapte). Se feliază rece.</li>
+                <li><strong>Servire:</strong> Minunat ca atare, cu dulceață de căpșuni sau cu ganache (ciocolată topită
+                  amestecată cu smântână pentru frișcă).</li>
+              </ol>
+
+              <button class="btn btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#det-cheesecake-san">
+                Ascunde
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </article>
+
+
+      <!-- CIORBĂ DE PUI A LA GREC -->
+      <article id="ciorba-pui-grec" class="col-12 col-md-6 col-lg-4 recipe-card" data-category="Supe și ciorbe"
+        data-tags="supa ciorba pui grec orez lamaie smantana" data-title="ciorba de pui a la grec">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/img/Ciorba_de_pui_a_la_grec.jpg" class="card-img-top" alt="Ciorbă de pui a la grec" />
+          <div class="card-body d-flex flex-column">
+
+            <!-- Rezumat -->
+            <div class="summary">
+              <h5 class="card-title">Ciorbă de pui a la grec</h5>
+              <p class="card-text small">Cremă fină, acrișoară cu lămâie, dreasă cu smântână și gălbenușuri.</p>
+              <table class="table table-sm table-striped small mb-3">
+                <thead>
+                  <tr>
+                    <th>Calorii</th>
+                    <th>Proteine</th>
+                    <th>Grăsimi</th>
+                    <th>Timp</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>~362</td>
+                    <td>~22 g</td>
+                    <td>~23 g</td>
+                    <td>~1h 20min</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#det-ciorba-pui-grec">
+                  Vezi rețeta
+                </button>
+                <a href="https://youtu.be/FpeDiID8Nug" target="_blank" class="btn btn-outline-danger">
+                  <i class="bi bi-play-circle"></i> Vezi video
+                </a>
+              </div>
+            </div>
+
+            <!-- Detalii (ascunse inițial) -->
+            <div id="det-ciorba-pui-grec" class="collapse mt-3">
+              <h6 class="fw-bold text-primary">Ingrediente</h6>
+              <ul class="small mb-3">
+                <li>1 kg carne de pui cu os</li>
+                <li>300 g smântână (sau iaurt gras 10%)</li>
+                <li>80 g orez</li>
+                <li>4 gălbenușuri</li>
+                <li>2 cepe, tocate</li>
+                <li>1 morcov, cubulețe</li>
+                <li>1 ardei gras, cubulețe</li>
+                <li>¼ țelină, cubulețe</li>
+                <li>1 păstârnac, cubulețe</li>
+                <li>1 legătură pătrunjel, tocat</li>
+                <li>1 legătură mărar, tocat</li>
+                <li>Zeama de la 2 lămâi</li>
+                <li>Sare, după gust</li>
+              </ul>
+
+              <h6 class="fw-bold text-primary">Mod de preparare</h6>
+              <ol class="small mb-3">
+                <li><strong>Fierbe baza:</strong> Pune carnea în apă rece cu sare; spumează. Adaugă ceapa, morcovul,
+                  ardeiul,
+                  țelina și păstârnacul. Fierbe la foc mic până carnea e fragedă; scoate carnea, dezoseaz-o și pune
+                  bucățile înapoi.</li>
+                <li><strong>Adaugă orezul:</strong> Spală orezul și fierbe-l în ciorbă ~10–12 minute, până e aproape
+                  gata.</li>
+                <li><strong>Dresătura:</strong> Amestecă smântâna cu gălbenușurile și zeama de lămâie.
+                  <u>Temperează</u>: toarnă treptat 3–4 polonice de ciorbă fierbinte peste amestec, amestecând continuu.
+                </li>
+                <li><strong>Incorporează:</strong> Toarnă dresătura în oală la foc mic, amestecând; <em>nu</em> lăsa să
+                  clocotească.
+                  Potrivește de sare și lămâie.</li>
+                <li><strong>Finalizează:</strong> Oprește focul, adaugă mărarul și pătrunjelul. Servește cu extra lămâie
+                  și ardei iute.</li>
+              </ol>
+
+              <button class="btn btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#det-ciorba-pui-grec">
+                Ascunde
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </article>
+
+
+      <!-- HELP MODAL -->
+      <div class="modal fade" id="helpModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Ajutor</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Închide"></button>
+            </div>
+            <div class="modal-body small">
+              Folosește căsuța de <strong>căutare</strong> pentru a filtra după nume, ingredient sau categorie.
+              Poți alege și un <strong>filtru</strong> din dreapta.
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Detalii (ascunse inițial) -->
-      <div id="det-papanasi-pufosi" class="collapse mt-3">
-        <h6 class="fw-bold text-primary">Ingrediente</h6>
-        <ul class="small mb-3">
-          <li>500 g brânză dulce de vaci (grasă, bine scursă)</li>
-          <li>2 ouă</li>
-          <li>300 g făină</li>
-          <li>30 g zahăr</li>
-          <li>5 g bicarbonat de sodiu</li>
-          <li>1 lingură extract de vanilie</li>
-          <li>1 lingură extract de lămâie</li>
-          <li>un praf de sare</li>
-          <li>ulei pentru prăjit (baie de ulei)</li>
-          <li>200 g smântână grasă, 200 g dulceață de vișine (servire)</li>
-        </ul>
 
-        <h6 class="fw-bold text-primary">Mod de preparare</h6>
-        <ol class="small mb-3">
-          <li><strong>Aluatul:</strong> Amestecă brânza bine scursă cu ouăle, zahărul, sarea și aromele.
-              Adaugă făina și bicarbonatul; frământă doar cât să se încorporeze — nu exagera ca să rămână pufoși.</li>
-          <li><strong>Modelare:</strong> Împarte aluatul în 6 bucăți. Din fiecare formează un inel (papanășul)
-              și o biluță mică pentru deasupra.</li>
-          <li><strong>Prăjire:</strong> Prăjește în baie de ulei la foc mediu spre mic ~5–6 minute, până se rumenesc
-              frumos și sunt gătiți la interior. Scoate pe șervețele.</li>
-          <li><strong>Servire:</strong> Lasă 5–10 minute la răcit, apoi pune smântână și dulceață de vișine.
-              Servește imediat — pufos și delicios!</li>
-        </ol>
-
-        <button class="btn btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#det-papanasi-pufosi">
-          Ascunde
-        </button>
-      </div>
-
-    </div>
-  </div>
-</article>
-
-
-    <!-- PANCAKES DE POST -->
-<article id="pancakes-post"
-         class="col-12 col-md-6 col-lg-4 recipe-card"
-         data-category="Deserturi"
-         data-tags="dulciuri mic-dejun clatite pancakes de post"
-         data-title="pancakes de post pufoase">
-  <div class="card h-100 shadow-sm">
-    <img src="assets/img/Pancakes.jpg" class="card-img-top" alt="Pancakes de post pufoase" />
-    <div class="card-body d-flex flex-column">
-
-      <!-- Rezumat -->
-      <div class="summary">
-        <h5 class="card-title">Pancakes pufoase</h5>
-        <p class="card-text small">Pufoase, aromate, perfecte pentru mic dejun sau desert — fără ouă, fără lapte.</p>
-        <table class="table table-sm table-striped small mb-3">
-          <thead><tr><th>Calorii</th><th>Proteine</th><th>Grăsimi</th><th>Timp</th></tr></thead>
-          <tbody><tr><td>~139</td><td>3 g</td><td>3 g</td><td>~35 min</td></tr></tbody>
-        </table>
-        <div class="d-flex flex-wrap gap-2">
-          <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#det-pancakes-post">
-            Vezi rețeta
-          </button>
-          <a href="https://youtu.be/BCedOLUVw8M" target="_blank" class="btn btn-outline-danger">
-            <i class="bi bi-play-circle"></i> Vezi video
-          </a>
+      <!-- FOOTER -->
+      <footer class="border-top py-4 mt-auto">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+          <p class="mb-0 small">© <span id="year"></span> Rețete Delicioase</p>
+          <div class="d-flex gap-3 fs-5">
+            <a href="#" aria-label="Facebook" class="text-muted"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram" class="text-muted"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="YouTube" class="text-muted"><i class="bi bi-youtube"></i></a>
+            <a href="#" aria-label="TikTok" class="text-muted"><i class="bi bi-tiktok"></i></a>
+          </div>
         </div>
-      </div>
+      </footer>
 
-      <!-- Detalii -->
-      <div id="det-pancakes-post" class="collapse mt-3">
-        <h6 class="fw-bold text-primary">Ingrediente</h6>
-        <ul class="small mb-3">
-          <li>330 ml băutură vegetală din migdale (Alpro)</li>
-          <li>250 g făină</li>
-          <li>30 g zahăr vanilat</li>
-          <li>20 ml ulei</li>
-          <li>15 g praf de copt</li>
-          <li>1 linguriță esență de lămâie</li>
-          <li>un praf de sare</li>
-        </ul>
-
-        <h6 class="fw-bold text-primary">Mod de preparare</h6>
-        <ol class="small mb-3">
-          <li><strong>Compoziția:</strong> Amestecă făina, zahărul, praful de copt și sarea. Adaugă băutura vegetală,
-              uleiul și esența de lămâie. Omogenizează până obții un aluat gros, dar curgător.</li>
-          <li><strong>Coacerea:</strong> Toarnă compoziția în tigaia antiaderentă încinsă și coace clătitele la foc
-              potrivit 1-2 minute pe fiecare parte, până devin aurii.</li>
-          <li><strong>Servire:</strong> Servește-le cu fructe proaspete, sirop de arțar, ciocolată sau cremă de alune —
-              după gust.</li>
-        </ol>
-
-        <button class="btn btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#det-pancakes-post">
-          Ascunde
-        </button>
-      </div>
-
-    </div>
-  </div>
-</article>
-
-
-    <!-- CHEESECAKE SAN SEBASTIÁN -->
-<article id="cheesecake-san-sebastian"
-         class="col-12 col-md-6 col-lg-4 recipe-card"
-         data-category="Deserturi"
-         data-tags="dulciuri cheesecake cuptor san sebastian"
-         data-title="cheesecake san sebastian">
-  <div class="card h-100 shadow-sm">
-    <img src="assets/img/Cheesecake.jpg" class="card-img-top" alt="Cheesecake San Sebastián" />
-    <div class="card-body d-flex flex-column">
-
-      <!-- Rezumat -->
-      <div class="summary">
-        <h5 class="card-title">Cheesecake</h5>
-        <p class="card-text small">Cremă densă, coajă caramelizată, fără blat — servit rece, irezistibil.</p>
-        <table class="table table-sm table-striped small mb-3">
-          <thead><tr><th>Calorii</th><th>Proteine</th><th>Grăsimi</th><th>Timp</th></tr></thead>
-          <tbody><tr><td>~424</td><td>~7 g</td><td>~35 g</td><td>~55 min</td></tr></tbody>
-        </table>
-        <div class="d-flex flex-wrap gap-2">
-          <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#det-cheesecake-san">
-            Vezi rețeta
-          </button>
-          <a href="https://youtu.be/085HewMazqo" target="_blank" class="btn btn-outline-danger">
-            <i class="bi bi-play-circle"></i> Vezi video
-          </a>
-        </div>
-      </div>
-
-      <!-- Detalii (ascunse inițial) -->
-      <div id="det-cheesecake-san" class="collapse mt-3">
-        <h6 class="fw-bold text-primary">Ingrediente</h6>
-        <ul class="small mb-3">
-          <li>6 ouă (la temperatura camerei)</li>
-          <li>1 kg cremă de brânză (tip cream cheese, NU brânză de vaci/ricotta)</li>
-          <li>500 ml smântână pentru frișcă (smântână dulce, nu vegetală)</li>
-          <li>250 g zahăr cu aromă de vanilie</li>
-          <li>60 g făină</li>
-          <li>Zeama și coaja de la 1 lămâie</li>
-          <li>Un praf de sare</li>
-        </ul>
-
-        <h6 class="fw-bold text-primary">Mod de preparare</h6>
-        <ol class="small mb-3">
-          <li><strong>Încălzește cuptorul</strong> la 210–220°C. Tapetează o formă rotundă (22–24 cm) cu hârtie de copt
-              ridicată pe margini (efect „șifonat”). Toate ingredientele trebuie să fie la temperatura camerei.</li>
-          <li><strong>Cremă:</strong> Bate scurt crema de brânză cu zahărul și sarea până devine netedă.
-              Adaugă pe rând ouăle, apoi smântâna pentru frișcă. Încorporează făina cernută, zeama și coaja de lămâie.
-              Amestecă doar cât să fie omogen (fără a incorpora aer excesiv).</li>
-          <li><strong>Coacere:</strong> Toarnă compoziția în formă și coace ~45–55 min la 210–220°C,
-              până suprafața se caramelizează bine (maro-închis), iar centrul încă tremură ușor.</li>
-          <li><strong>Răcire:</strong> Lasă cheesecake-ul să ajungă la temperatura camerei, apoi răcește-l la frigider
-              cel puțin 4–6 ore (ideal peste noapte). Se feliază rece.</li>
-          <li><strong>Servire:</strong> Minunat ca atare, cu dulceață de căpșuni sau cu ganache (ciocolată topită
-              amestecată cu smântână pentru frișcă).</li>
-        </ol>
-
-        <button class="btn btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#det-cheesecake-san">
-          Ascunde
-        </button>
-      </div>
-
-    </div>
-  </div>
-</article>
-
-
-    <!-- CIORBĂ DE PUI A LA GREC -->
-<article id="ciorba-pui-grec"
-         class="col-12 col-md-6 col-lg-4 recipe-card"
-         data-category="Supe și ciorbe"
-         data-tags="supa ciorba pui grec orez lamaie smantana"
-         data-title="ciorba de pui a la grec">
-  <div class="card h-100 shadow-sm">
-    <img src="assets/img/Ciorba_de_pui_a_la_grec.jpg" class="card-img-top" alt="Ciorbă de pui a la grec" />
-    <div class="card-body d-flex flex-column">
-
-      <!-- Rezumat -->
-      <div class="summary">
-        <h5 class="card-title">Ciorbă de pui a la grec</h5>
-        <p class="card-text small">Cremă fină, acrișoară cu lămâie, dreasă cu smântână și gălbenușuri.</p>
-        <table class="table table-sm table-striped small mb-3">
-          <thead><tr><th>Calorii</th><th>Proteine</th><th>Grăsimi</th><th>Timp</th></tr></thead>
-          <tbody><tr><td>~362</td><td>~22 g</td><td>~23 g</td><td>~1h 20min</td></tr></tbody>
-        </table>
-        <div class="d-flex flex-wrap gap-2">
-          <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#det-ciorba-pui-grec">
-            Vezi rețeta
-          </button>
-          <a href="https://youtu.be/FpeDiID8Nug" target="_blank" class="btn btn-outline-danger">
-            <i class="bi bi-play-circle"></i> Vezi video
-          </a>
-        </div>
-      </div>
-
-      <!-- Detalii (ascunse inițial) -->
-      <div id="det-ciorba-pui-grec" class="collapse mt-3">
-        <h6 class="fw-bold text-primary">Ingrediente</h6>
-        <ul class="small mb-3">
-          <li>1 kg carne de pui cu os</li>
-          <li>300 g smântână (sau iaurt gras 10%)</li>
-          <li>80 g orez</li>
-          <li>4 gălbenușuri</li>
-          <li>2 cepe, tocate</li>
-          <li>1 morcov, cubulețe</li>
-          <li>1 ardei gras, cubulețe</li>
-          <li>¼ țelină, cubulețe</li>
-          <li>1 păstârnac, cubulețe</li>
-          <li>1 legătură pătrunjel, tocat</li>
-          <li>1 legătură mărar, tocat</li>
-          <li>Zeama de la 2 lămâi</li>
-          <li>Sare, după gust</li>
-        </ul>
-
-        <h6 class="fw-bold text-primary">Mod de preparare</h6>
-        <ol class="small mb-3">
-          <li><strong>Fierbe baza:</strong> Pune carnea în apă rece cu sare; spumează. Adaugă ceapa, morcovul, ardeiul,
-              țelina și păstârnacul. Fierbe la foc mic până carnea e fragedă; scoate carnea, dezoseaz-o și pune bucățile înapoi.</li>
-          <li><strong>Adaugă orezul:</strong> Spală orezul și fierbe-l în ciorbă ~10–12 minute, până e aproape gata.</li>
-          <li><strong>Dresătura:</strong> Amestecă smântâna cu gălbenușurile și zeama de lămâie.
-              <u>Temperează</u>: toarnă treptat 3–4 polonice de ciorbă fierbinte peste amestec, amestecând continuu.</li>
-          <li><strong>Incorporează:</strong> Toarnă dresătura în oală la foc mic, amestecând; <em>nu</em> lăsa să clocotească.
-              Potrivește de sare și lămâie.</li>
-          <li><strong>Finalizează:</strong> Oprește focul, adaugă mărarul și pătrunjelul. Servește cu extra lămâie și ardei iute.</li>
-        </ol>
-
-        <button class="btn btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#det-ciorba-pui-grec">
-          Ascunde
-        </button>
-      </div>
-
-    </div>
-  </div>
-</article>
-
-
-  <!-- HELP MODAL -->
-  <div class="modal fade" id="helpModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Ajutor</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Închide"></button>
-        </div>
-        <div class="modal-body small">
-          Folosește căsuța de <strong>căutare</strong> pentru a filtra după nume, ingredient sau categorie.
-          Poți alege și un <strong>filtru</strong> din dreapta.
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- FOOTER -->
-  <footer class="border-top py-4 mt-auto">
-    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
-      <p class="mb-0 small">© <span id="year"></span> Rețete Delicioase</p>
-      <div class="d-flex gap-3 fs-5">
-        <a href="#" aria-label="Facebook" class="text-muted"><i class="bi bi-facebook"></i></a>
-        <a href="#" aria-label="Instagram" class="text-muted"><i class="bi bi-instagram"></i></a>
-        <a href="#" aria-label="YouTube" class="text-muted"><i class="bi bi-youtube"></i></a>
-        <a href="#" aria-label="TikTok" class="text-muted"><i class="bi bi-tiktok"></i></a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/theme.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/search.js"></script>
+      <!-- JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/js/theme.js"></script>
+      <script src="assets/js/main.js"></script>
+      <script src="assets/js/search.js"></script>
 </body>
+
 </html>

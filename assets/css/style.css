@@ -209,12 +209,12 @@ footer { background: transparent; }
   .weekly-ribbon { top: .75rem; left: .75rem; font-size: .8rem; }
 }
 
-/* Dimensiuni fixe doar pentru imaginea de la supa de pui cu gnocchi
+/*Dimensiuni fixe doar pentru imaginea de la supa de pui cu gnocchi*/
 #supa-gnocchi-pui img {
   height: 275px;
   object-fit: cover;
   object-position: center;
-}*/
+}
 
 /* Adaugă acest cod nou - observă selectorul modificat pentru a ținti exact imaginea: */
 .weekly-feature img.w-100 {
