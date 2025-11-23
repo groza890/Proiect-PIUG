@@ -2,7 +2,7 @@
 /* ========== DARK / DIM THEME (mai soft) ========== */
 [data-theme="dark"] {
   /* Paletă mai „caldă” */
-  --bg:            #171a1f;   /* fundal pagină (gri-albăstrui închis) */
+  --bg:            #242830;   /* fundal pagină (gri-albăstrui închis) */
   --surface:       #20242b;   /* suprafețe: carduri, modale */
   --surface-2:     #1c2026;   /* navbar, footer */
   --border:        #2d333b;   /* contururi discrete */
@@ -93,13 +93,16 @@
 /* Iconițe social/secondary */
 [data-theme="dark"] .text-muted { color: var(--muted) !important; }
 
-
-html, body { height: 100%; }
-body { font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--bg); color: var(--fg); }
-
-
 .bg-body-tertiary { background-color: var(--bg) !important; }
-.navbar .nav-link.active { font-weight: 600; text-decoration: underline; }
+.navbar .nav-link.active { font-weight: 600; text-decoration: underline;  color: #ffffff; }
+
+/* Pentru dark mode, când tema este activă */
+body[data-theme="dark"] .navbar .nav-link.active {
+  color: #ffffff; /* Culoare mai deschisă pentru textul activ */
+  background-color: #333333; /* Fundal mai întunecat pentru linkul activ */
+  font-weight: 600;
+  text-decoration: underline;
+}
 
 
 .bg-blur { backdrop-filter: blur(6px); background-color: rgba(0,0,0,.35); }
@@ -134,7 +137,7 @@ footer { background: transparent; }
 /* toate imaginile din carusel */
 #heroCarousel .carousel-item img {
   max-height: 520px;
-  width: 100%;
+  width: 80%;
   object-fit: cover;   /* umple cadrul fără deformare */
 }
 
@@ -236,4 +239,137 @@ footer { background: transparent; }
 /* pe ecrane mici, las-o mai înaltă pentru impact */
 @media (max-width: 767.98px) {
   .about-img-wrap { height: 260px; }
+}
+
+/* ===== TYPOGRAPHY & SPACING ===== */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+
+/* Linii de separare subtile */
+hr {
+  border: none;
+  height: 1px;
+  background: var(--border);
+  opacity: 0.5;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+/* ===== CARDS ===== */
+.card {
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.card img {
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.03);
+}
+
+/* ===== TABLES ===== */
+.table {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+.table thead {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--border);
+}
+
+/* ===== LINKS ===== */
+a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== SHADOWS REFINED ===== */
+.shadow-lg {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+}
+
+.shadow-sm {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+}
+
+/* ===== FORM ELEMENTS ===== */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(61, 130, 246, 0.25);
+}
+
+/* ===== MOBILE OPTIMIZATIONS ===== */
+@media (max-width: 576px) {
+  h1, h2 { font-size: 1.5rem; }
+  .weekly-title { font-size: 1.4rem; }
+  .card { margin-bottom: 1rem; }
+}
+
+/* ===== SCROLL SMOOTH ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== LOADING STATE ===== */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.loading {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Stilizare pentru butonul navbar-toggler (hamburger) */
+body[data-theme="dark"] .navbar-toggler {
+  background-color: transparent !important; /* Fundal transparent pentru buton */
+  border: 2px solid #ffffff !important; /* Bordură albă pentru contrast */
+  padding: 15px !important; /* Dimensiune mai mare pentru buton */
+  border-radius: 50% !important; /* Rotunjește marginea pentru un aspect mai curat */
+}
+
+/* Stilizare pentru iconița hamburger (span cu navbar-toggler-icon) */
+body[data-theme="dark"] .navbar-toggler-icon {
+  background-color: #ffffff !important; /* Alb pentru contrast */
+  width: 25px !important; /* Lățime iconiță */
+  height: 3px !important; /* Înălțime iconiță */
+  display: block !important; /* Asigură-te că este tratat ca un bloc */
+  margin: 5px auto !important; /* Centrează iconița */
+}
+
+/* Dacă ai mai multe linii pentru hamburger, stilizează-le individual */
+body[data-theme="dark"] .navbar-toggler-icon::before,
+body[data-theme="dark"] .navbar-toggler-icon::after {
+  background-color: #ffffff !important; /* Stil alb pentru liniile de sus și jos */
 }
