@@ -368,7 +368,7 @@ body[data-theme="dark"] .navbar-toggler-icon {
   margin: 5px auto !important; /* Centrează iconița */
 }
 
-/* Dacă ai mai multe linii pentru hamburger, stilizează-le individual */
+
 body[data-theme="dark"] .navbar-toggler-icon::before,
 body[data-theme="dark"] .navbar-toggler-icon::after {
   background-color: #ffffff !important; /* Stil alb pentru liniile de sus și jos */
