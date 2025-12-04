@@ -373,3 +373,27 @@ body[data-theme="dark"] .navbar-toggler-icon::before,
 body[data-theme="dark"] .navbar-toggler-icon::after {
   background-color: #ffffff !important; /* Stil alb pentru liniile de sus și jos */
 }
+
+/* Stil pentru navbar în light mode */
+.navbar .nav-link {
+    color: #000 !important; /* Text negru pentru navbar în light mode */
+}
+
+.navbar .nav-link:hover {
+    color: #007bff !important; /* Culoare albastră pentru hover */
+}
+
+/* Culoare text pentru navbar în dark mode */
+[data-theme="dark"] .navbar .nav-link {
+    color: #ffffff !important; /* Text alb pentru navbar în dark mode */
+}
+
+/* Culoare pentru link-urile active în dark mode */
+[data-theme="dark"] .navbar .nav-link.active {
+    color: #007bff !important; /* Albastru pentru link-ul activ */
+}
+
+/* Culoare pentru hover în dark mode */
+[data-theme="dark"] .navbar .nav-link:hover {
+    color: #b0c9ff !important; /* Culoare mai deschisă la hover */
+}
