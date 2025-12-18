@@ -14,6 +14,16 @@
 
   --overlay-strong: rgba(20, 22, 26, .48);
   --overlay-soft:   rgba(20, 22, 26, .30);
+
+  /* 🔥 ASTA lipsea (Bootstrap vars) */
+  --bs-body-bg:          var(--bg);
+  --bs-body-color:       var(--text);
+  --bs-secondary-color:  var(--muted);
+  --bs-border-color:     var(--border);
+
+  /* sincronizare cu light */
+  --fg:   var(--text);
+  --card: var(--surface);
 }
 
 /* Aplicare variabile pe elemente globale */
@@ -397,3 +407,152 @@ body[data-theme="dark"] .navbar-toggler-icon::after {
 [data-theme="dark"] .navbar .nav-link:hover {
     color: #b0c9ff !important; /* Culoare mai deschisă la hover */
 }
+
+/* sincronizează variabilele light cu dark */
+[data-theme="dark"]{
+  --fg:   var(--text);
+  --card: var(--surface);
+}
+
+/* asigură-te că titlurile din carduri se văd în dark */
+[data-theme="dark"] .card-title,
+[data-theme="dark"] .card h1,
+[data-theme="dark"] .card h2,
+[data-theme="dark"] .card h3,
+[data-theme="dark"] .card h4,
+[data-theme="dark"] .card h5,
+[data-theme="dark"] .card h6{
+  color: var(--text) !important;
+}
+
+[data-theme="dark"]{
+  --muted: #b8c0cc;
+}
+
+/* =======================
+   DARK MODE – Premium polish
+   (pune-l la FINAL de style.css)
+   ======================= */
+[data-theme="dark"] {
+  /* 1) Tonuri ușor mai “premium” (mai puțin negru) */
+  --bg:        #1f2430;
+  --surface:   #232a36;
+  --surface-2: #1c2230;
+  --border:    rgba(255,255,255,.10);
+
+  /* 2) Text mai echilibrat */
+  --text:  #eef2ff;
+  --muted: rgba(238, 242, 255, .72);
+
+  /* 3) Umbre subtile (stratificare) */
+  --shadow-1: 0 8px 24px rgba(0,0,0,.28);
+  --shadow-2: 0 12px 40px rgba(0,0,0,.35);
+
+  /* 4) Link/Accent puțin mai “soft” */
+  --link: #9cc3ff;
+}
+
+/* Fundal + text general */
+[data-theme="dark"] body {
+  background: radial-gradient(1200px 800px at 20% 0%, rgba(61,130,246,.10), transparent 55%),
+              radial-gradient(900px 700px at 90% 10%, rgba(137,180,255,.08), transparent 50%),
+              var(--bg) !important;
+  color: var(--text);
+}
+
+/* Carduri – border subtil + shadow premium */
+[data-theme="dark"] .card,
+[data-theme="dark"] .modal-content,
+[data-theme="dark"] .dropdown-menu {
+  background-color: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow-1);
+}
+
+/* Card hover (foarte subtil) */
+[data-theme="dark"] .card:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-2);
+}
+
+/* Titluri + texte secundare */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] .card-title {
+  color: var(--text) !important;
+}
+
+[data-theme="dark"] p,
+[data-theme="dark"] .weekly-subtle,
+[data-theme="dark"] .text-muted,
+[data-theme="dark"] .lead {
+  color: var(--muted) !important;
+}
+
+/* Navbar – mai “glass” și consistent */
+[data-theme="dark"] .navbar,
+[data-theme="dark"] .navbar.bg-body-tertiary,
+[data-theme="dark"] .navbar.bg-body {
+  background: rgba(28, 34, 48, .78) !important;
+  border-bottom: 1px solid rgba(255,255,255,.08) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Linkuri navbar */
+[data-theme="dark"] .navbar .nav-link {
+  color: rgba(238,242,255,.78) !important;
+}
+[data-theme="dark"] .navbar .nav-link:hover {
+  color: var(--text) !important;
+}
+[data-theme="dark"] .navbar .nav-link.active {
+  color: var(--link) !important;
+  text-decoration-color: rgba(156,195,255,.65);
+}
+
+/* Butoane – focus ring “premium” */
+[data-theme="dark"] .btn-primary {
+  background-color: var(--primary) !important;
+  border-color: rgba(255,255,255,.10) !important;
+}
+[data-theme="dark"] .btn-outline-danger,
+[data-theme="dark"] .btn-outline-primary,
+[data-theme="dark"] .btn-outline-secondary {
+  border-color: rgba(255,255,255,.16) !important;
+  color: rgba(238,242,255,.85) !important;
+}
+[data-theme="dark"] .btn:focus,
+[data-theme="dark"] .btn:focus-visible,
+[data-theme="dark"] input:focus,
+[data-theme="dark"] textarea:focus,
+[data-theme="dark"] select:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 .22rem rgba(61,130,246,.28) !important;
+}
+
+/* Chip-uri / badge-uri (ex: timp/porții/populară) */
+[data-theme="dark"] .badge,
+[data-theme="dark"] .chip,
+[data-theme="dark"] .pill,
+[data-theme="dark"] .btn-light {
+  background-color: rgba(255,255,255,.06) !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+  color: rgba(238,242,255,.86) !important;
+}
+
+.badge-float {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(61,130,246,.95);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: .75rem;
+  font-weight: 600;
+}
+
